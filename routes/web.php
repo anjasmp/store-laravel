@@ -28,5 +28,10 @@ Route::get('/dashboard/products', 'DashboardProductController@index')->name('das
 Route::get('/dashboard/products/create', 'DashboardProductController@create')->name('dashboard-product-create');
 Route::get('/dashboard/products/{id}', 'DashboardProductController@details')->name('dashboard-product-detail');
 
+Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transaction');
+Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@details')->name('dashboard-transaction-details');
+
+Route::get('/dashboard/settings', 'DashboardSettingController@store')->name('dashboard-setting-store');
+Route::get('/dashboard/account', 'DashboardSettingController@account')->name('dashboard-setting-account');
 
 Auth::routes();
